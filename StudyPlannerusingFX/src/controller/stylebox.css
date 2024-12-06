@@ -1,0 +1,6 @@
+.HBox{
+    -fx-background-image: url("StudyPlanImage.jpg");
+    -fx-background-size: 60,69;
+    -fx-padding: 18 3 18 6;
+    -fx-background-radius: 5.0; 
+}

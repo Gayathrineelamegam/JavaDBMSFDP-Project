@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlcontroller.StudyPlanPageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="202.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="8.0" prefHeight="44.0" prefWidth="183.0">
+                           <children>
+                              <Label layoutX="31.0" layoutY="14.0" text="Study Plan System" textFill="#1b0e94">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="380.0" prefWidth="115.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="21.0" prefHeight="306.0" prefWidth="161.0">
+                           <children>
+                              <Label layoutX="22.0" layoutY="5.0" text="Welcome,">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="81.0" layoutY="5.0" text="Admin">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Button fx:id="GoalBtn" layoutX="15.0" layoutY="65.0" mnemonicParsing="false" onAction="#GoalBtn" text="Goal">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Label layoutX="9.0" layoutY="106.0" text="Enter the SubjectID">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="searchid" layoutX="16.0" layoutY="140.0" onAction="#searchPlan" prefHeight="26.0" prefWidth="94.0" />
+                              <ImageView fitHeight="159.0" fitWidth="184.0" layoutX="6.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Study2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="348.0" prefWidth="313.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="mm" layoutX="-15.0" layoutY="-32.0" prefHeight="258.0" prefWidth="449.0">
+                           <children>
+                              <AnchorPane layoutX="-6.0" prefHeight="226.0" prefWidth="448.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="23.0" text="Planid">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Label>
+                                    <Label layoutX="11.0" layoutY="63.0" prefHeight="18.0" prefWidth="70.0" text="Planname">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Label>
+                                    <Label layoutX="11.0" layoutY="95.0" text="StartDate">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Label>
+                                    <TextField fx:id="plan_id" layoutX="84.0" layoutY="19.0" />
+                                    <TextField fx:id="plan_name" layoutX="84.0" layoutY="59.0" />
+                                    <Button fx:id="add_plan" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#addPlan" text="AddPlan">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="update_plan" layoutX="112.0" layoutY="183.0" mnemonicParsing="false" onAction="#updatePlan" text="UpdatePlan">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="delete_id" layoutX="227.0" layoutY="184.0" mnemonicParsing="false" onAction="#deletePlan" text="DeletePlan">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Button>
+                                    <Label layoutX="234.0" layoutY="27.0" prefHeight="34.0" prefWidth="126.0" text="Plan Description" wrapText="true">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Label>
+                                    <Label layoutX="241.0" layoutY="86.0" text="SubjectId">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Label>
+                                    <TextField fx:id="subject_id" layoutX="323.0" layoutY="83.0" prefHeight="26.0" prefWidth="119.0" />
+                                    <TextArea fx:id="plan_description" layoutX="357.0" layoutY="25.0" prefHeight="38.0" prefWidth="90.0" />
+                                    <Button fx:id="search_Plan" layoutX="345.0" layoutY="184.0" mnemonicParsing="false" onAction="#searchPlan" text="SearchPlan">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font></Button>
+                                    <DatePicker fx:id="startdate" layoutX="85.0" layoutY="96.0" onAction="#startdate" prefHeight="26.0" prefWidth="146.0" />
+                                    <Label layoutX="11.0" layoutY="136.0" text="EndDate">
+                                       <font>
+                                          <Font name="Consolas Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="enddate" layoutX="85.0" layoutY="137.0" onAction="#enddate" prefHeight="26.0" prefWidth="146.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="19.0" layoutY="195.0" prefHeight="194.0" prefWidth="443.0">
+                           <children>
+                              <TableView fx:id="availableplans_tableview" layoutX="-4.0" layoutY="23.0" prefHeight="151.0" prefWidth="422.0">
+                                <columns>
+                                  <TableColumn fx:id="available_planid" prefWidth="47.2000150680542" text="PlanId" />
+                                  <TableColumn fx:id="available_planname" prefWidth="84.79994583129883" text="PlanName" />
+                                    <TableColumn fx:id="available_plandescription" prefWidth="100.800048828125" text="PlanDescription" />
+                                    <TableColumn fx:id="available_startdate" prefWidth="70.40000915527344" text="StartDate" />
+                                    <TableColumn fx:id="available_enddate" prefWidth="55.999969482421875" text="EndDate" />
+                                    <TableColumn fx:id="available_subjectid" prefWidth="60.00003662109373" text="SubjectID" />
+                                </columns>
+                              </TableView>
+                              <Label prefHeight="18.0" prefWidth="118.0" text="Plan Summary" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
